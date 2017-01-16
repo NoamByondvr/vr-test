@@ -1,6 +1,5 @@
 language: objective-c
 cache: bundler
-osx_image: xcode8
 rvm: 2.1.2
 install:
         - "./Scripts/install.sh"
