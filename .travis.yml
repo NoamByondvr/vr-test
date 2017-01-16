@@ -2,16 +2,16 @@ language: objective-c
 cache: bundler
 osx_image: xcode8.2
 before_install:
-    - install_android_sdk.sh
+    - "./install_android_sdk.sh"
 install:
-        - "./Scripts/install_unity.sh"
-        - "./Scripts/install_unity_android.sh"
+    - "./Scripts/install_unity.sh"
+    - "./Scripts/install_unity_android.sh"
 script:
-        - "./Scripts/build.sh"
+    - "./Scripts/build.sh"
 deploy:
-        provider: s3
-        access_key_id: $AWS_ACCESS_KEY_ID
-        secret_access_key: $AWS_SECRET_ACCESS_KEY
-        bucket: travis-build-test
-        skip_cleanup: true
-        acl: public_read
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: travis-build-test
+    skip_cleanup: true
+    acl: public_read
