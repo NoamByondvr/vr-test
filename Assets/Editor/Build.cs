@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.IO;
 using UnityEditor;
 
 public class BuildMyGame {
@@ -18,7 +19,9 @@ public class BuildMyGame {
 
     public static void Build(BuildTarget target) {
 		string[] levels = new string[1]{"Assets/main.unity"};
-        BuildPipeline.BuildPlayer(levels.ToArray(), Environment.GetCommandLineArgs().Last(), target,
-            BuildOptions.None);
+        string path = Environment.GetCommandLineArgs().Last();
+        if (!Directory.Exists(Path.GetDirectoryName(path)))
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+        BuildPipeline.BuildPlayer(levels.ToArray(), path, target, BuildOptions.None);
     }
 }
