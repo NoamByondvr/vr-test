@@ -6,7 +6,7 @@
 
 mkdir -p ./$(pwd)/Build/android
 
-echo "Attempting to build $project for Android"
+echo "Attempting to build Android"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
