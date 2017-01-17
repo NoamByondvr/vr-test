@@ -2,7 +2,6 @@ language: objective-c
 cache: bundler
 osx_image: xcode8.2
 before_install:
-before_install:
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
     - chmod +x ./Scripts/install_unity_android.sh
