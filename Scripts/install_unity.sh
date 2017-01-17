@@ -7,8 +7,8 @@
 
 mkdir -p ./unity
 
-echo '## Downloading from http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorInstaller/Unity-5.4.4f1.pkg: '
+echo '## curl -o ./unity/unity.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorInstaller/Unity-5.4.4f1.pkg'
 curl -o ./unity/unity.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorInstaller/Unity-5.4.4f1.pkg
 
-echo '## Installing Unity.pkg'
-sudo installer -dumplog -package ./unity/unity.pkg -target ./unity
+echo '## sudo installer -dumplog -package $(pwd)/unity/unity.pkg -target ./unity'
+sudo installer -dumplog -package $(pwd)/unity/unity.pkg -target ./unity

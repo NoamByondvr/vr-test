@@ -4,7 +4,7 @@
 
 # Change this the name of your project. This will be the name of the final executables as well.
 
-mkdir -p ./$(pwd)/Build/android
+mkdir -p $(pwd)/Build/android
 
 echo "Attempting to build Android"
 
