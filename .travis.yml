@@ -6,14 +6,12 @@ cache:
         - $HOME/.cache
         - $HOME/Applications
 before_install:
-    - mkdir -p $HOME/.cache/downloads
-    - mkdir -p $HOME/.cache/android
-    - mkdir -p $HOME/.tmp
-    - mkdir -p $pwd/Build
+    - chmod +x ./Scripts/init.sh
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
     - chmod +x ./Scripts/install_unity_android.sh
 install:
+    - "./Script/init.sh"
     - "./Scripts/install_android_sdk.sh"
     - "./Scripts/install_unity.sh"
 script:

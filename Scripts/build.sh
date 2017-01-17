@@ -3,7 +3,7 @@
 DOWNLOAD_DIR=$HOME/.cache/downloads
 ANDROID_DIR=$HOME/.cache/android
 TMP=$HOME/.tmp
-BUILD_DIR=$pwd/Build
+BUILD_DIR=$pwd/../Build
 
 echo "Attempting to build Android"
 
