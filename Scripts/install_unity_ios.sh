@@ -6,7 +6,7 @@
 # installs like this. You will probably need to grab a current link from: http://unity3d.com/get-unity/download/archive
 
 echo '## Downloading Android package from http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-5.4.4f1.pkg: '
-curl -o unity-android.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-5.4.4f1.pkg
+curl -o unity-ios.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-5.4.4f1.pkg
 
 echo '## Installing Android.pkg'
-sudo installer -dumplog -package unity-android.pkg -target /
+sudo installer -dumplog -package unity-ios -target /
