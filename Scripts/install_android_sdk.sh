@@ -32,3 +32,6 @@ echo yes | ./android-sdk-macosx/tools/android update sdk --filter build-tools-25
 
 echo "yes | ./android-sdk-macosx/tools/android update sdk --filter build-tools-25.0.2 --all --no-ui --force > /dev/null"
 echo yes | ./android-sdk-macosx/tools/android update sdk --filter build-tools-25.0.2 --all --no-ui --force > /dev/null
+
+export ANDROID_HOME=./android-sdk-macosx
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/25.0.2
