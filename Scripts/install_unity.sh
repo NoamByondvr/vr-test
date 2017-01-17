@@ -1,14 +1,31 @@
 #! /bin/sh
 
-# Example install script for Unity3D project. See the entire example: https://github.com/JonathanPorta/ci-build
-
-# This link changes from time to time. I haven't found a reliable hosted installer package for doing regular
-# installs like this. You will probably need to grab a current link from: http://unity3d.com/get-unity/download/archive
+BASE_URL=http://download.unity3d.com/download_unity
+HASH=5a3967d8c55d
+VERSION=5.4.4f1
 
 mkdir -p $(pwd)/unity
 
-echo '## curl -o curl -o $(pwd)/unity/unity.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorInstaller/Unity-5.4.4f1.pkg'
-curl -o $(pwd)/unity/unity.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorInstaller/Unity-5.4.4f1.pkg
+download() {
+    package=$1
+    dst=$2
+    url="$BASE_URL/$HASH/$package"
 
-echo '## sudo installer -dumplog -package $(pwd)/unity/unity.pkg -target /'
-sudo installer -dumplog -package $(pwd)/unity/unity.pkg -target /
+    echo "## Downloading from $url: "
+    echo "## into $pwd/unity/$dst"
+    curl -o $(pwd)/unity/$(dst) $(url)
+}
+
+install() {
+    package=$1
+    dst=$2
+    download "$package" "$dst"
+
+    echo "Installing $pwd/unity/$dst"
+    sudo installer -dumplog -package $(pwd)/unity/$(dst) -target /
+}
+
+install "MacEditorInstaller/Unity-$VERSION.pkg" "unity.pkg"
+install "MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg" "unity.pkg"
+
+sudo rm -rf $(pwd)/unity
