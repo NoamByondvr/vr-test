@@ -13,7 +13,7 @@ echo "Attempting to build $project for Android"
   -silent-crashes \
   -logFile $(pwd)/unity.log \
   -projectPath $(pwd) \
-  -quit
+  -quit \
   -executeMethod BuildMyGame.BuildAndroid "$(pwd)/Build/android/android.apk"
 
 echo 'Logs from build'

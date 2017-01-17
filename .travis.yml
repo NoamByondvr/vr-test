@@ -15,4 +15,3 @@ deploy:
     bucket: travis-build-test
     skip_cleanup: true
     acl: public_read
-    file: "Build/android/android.apk"
