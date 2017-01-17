@@ -12,10 +12,10 @@ cache:
         - $HOME/Applications
 osx_image: xcode8.2
 before_install:
-    - mkdir -p $(DOWNLOAD_DIR)
-    - mkdir -p $(ANDROID_DIR)
-    - mkdir -p $(TMP)
-    - mkdir -p $(BUILD_DIR)
+    - mkdir -p $DOWNLOAD_DIR
+    - mkdir -p $ANDROID_DIR
+    - mkdir -p $TMP
+    - mkdir -p $BUILD_DIR
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
     - chmod +x ./Scripts/install_unity_android.sh
