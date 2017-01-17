@@ -1,7 +1,7 @@
 language: objective-c
 cache:
     bundler: true
-        directories:
+    directories:
         - $HOME/.cache/downloads
         - $HOME/Applications
 osx_image: xcode8.2
