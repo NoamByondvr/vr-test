@@ -7,7 +7,7 @@
 
 mkdir -p $(pwd)/unity
 
-echo '## curl -o unity/unity-android.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-5.4.4f1.pkg'
+echo '## curl -o $(pwd)/unity/unity-android.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-5.4.4f1.pkg'
 curl -o $(pwd)/unity/unity-android.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-5.4.4f1.pkg
 
 echo '## sudo installer -dumplog -package $(pwd)/unity/unity-android.pkg -target /unity'

@@ -6,8 +6,8 @@
 # installs like this. You will probably need to grab a current link from: http://unity3d.com/get-unity/download/archive
 mkdir -p $(pwd)/unity
 
-echo '## curl -o unity/unity-ios.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-5.4.4f1.pkg'
+echo '## curl -o $(pwd)/unity/unity-ios.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-5.4.4f1.pkg'
 curl -o $(pwd)/unity/unity-ios.pkg http://download.unity3d.com/download_unity/5a3967d8c55d/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-5.4.4f1.pkg
 
-echo '## sudo installer -dumplog -package unity/unity-ios -target /unity'
+echo '## sudo installer -dumplog -package $(pwd)/unity/unity-ios -target /unity'
 sudo installer -dumplog -package $(pwd)/unity/unity-ios -target /unity
