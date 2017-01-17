@@ -11,4 +11,4 @@ curl -o Android.pkg http://download.unity3d.com/download_unity/b7e030c65c9b/MacE
 ls -l
 
 echo '## Installing Android.pkg'
-sudo installer -package Android.pkg -target /
+sudo installer -dumplog -package Android.pkg -target /
