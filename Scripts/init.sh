@@ -8,4 +8,4 @@ export BUILD_DIR=$pwd/../Build
 mkdir -p $DOWNLOAD_DIR
 mkdir -p $ANDROID_DIR
 mkdir -p $TMP
-mkdir -p $BUILD_DIR
+mkdir -p sudo $BUILD_DIR
