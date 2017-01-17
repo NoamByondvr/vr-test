@@ -1,6 +1,8 @@
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
 /[Aa]ssetBundles/
 /Assets/AssetStoreTools*
 
@@ -38,7 +40,3 @@ Assets/StreamingAssets/
 Assets/Resources/cache.json
 Assets/Editor/Build_directory/
 Assets/Editor/Build_directory.meta
-
-# build time ignore
-/[Aa]ndroid-sdk/
-/[Uu]nity/
