@@ -1,9 +1,10 @@
 language: objective-c
 env:
-    - DOWNLOAD_DIR=$HOME/.cache/downloads
-    - ANDROID_DIR=$HOME/.cache/android
-    - TMP=$HOME/.tmp
-    - BUILD_DIR=$pwd/Build
+    global:
+        - DOWNLOAD_DIR=$HOME/.cache/downloads
+        - ANDROID_DIR=$HOME/.cache/android
+        - TMP=$HOME/.tmp
+        - BUILD_DIR=$pwd/Build
 cache:
     bundler: true
     directories:
