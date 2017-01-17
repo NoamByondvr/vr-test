@@ -5,14 +5,13 @@ VERSION=r25.2.3
 BASEURL=http://dl.google.com/android/repository
 URL=$BASEURL/tools_$VERSION-macosx.zip
 
-DST_ZIP=$HOME/.cache/downloads/android-sdk/android-sdk.zip
+DST_ZIP=$DOWNLOAD_DIR/android-sdk.zip
 
 if [ -f "$DST_ZIP" ];
 then
    echo "File $DST_ZIP exist."
 else
-    
-    mkdir -p $HOME/.cache/downloads/android-sdk
+
     echo "## curl -o $DST_ZIP $URL"
     curl -o $DST_ZIP $URL
 

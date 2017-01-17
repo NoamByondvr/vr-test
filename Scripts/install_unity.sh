@@ -6,8 +6,8 @@ BASE_URL=http://download.unity3d.com/download_unity
 
 
 download() {
-    url=$1
-    dst=$2
+    url=$2
+    dst=$1
     echo "## Downloading from: $url"
     echo "## to: $dst"
     curl -o $(dst) $(url)
@@ -17,13 +17,14 @@ install() {
 
     package=$1
     file_name=$2
+    target_url=$BASE_URL/$HASH/$package
+    target_file=$DOWNLOAD_DIR/$file_name
 
-    if [ -f "$DST_ZIP" ];
+    if [ -f "$target_file" ];
     then
-        echo "File $DST_ZIP exist."
+        echo "File $target_file exist."
     else
-        mkdir -p $(DOWNLOAD_DIR)
-        download "$BASE_URL/$HASH/$package" "$DOWNLOAD_DIR/$file_name"
+        download "target_file" "$target_url"
 
     	echo "Installing $DOWNLOAD_DIR/$file_name"
     	sudo installer -dumplog -package $(DOWNLOAD_DIR)/$(file_name) -target /
