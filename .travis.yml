@@ -1,21 +1,15 @@
 language: objective-c
-env:
-    global:
-        - DOWNLOAD_DIR=$HOME/.cache/downloads
-        - ANDROID_DIR=$HOME/.cache/android
-        - TMP=$HOME/.tmp
-        - BUILD_DIR=$pwd/Build
+osx_image: xcode8.2
 cache:
     bundler: true
     directories:
         - $HOME/.cache
         - $HOME/Applications
-osx_image: xcode8.2
 before_install:
-    - mkdir -p $DOWNLOAD_DIR
-    - mkdir -p $ANDROID_DIR
-    - mkdir -p $TMP
-    - mkdir -p $BUILD_DIR
+    - mkdir -p $HOME/.cache/downloads
+    - mkdir -p $HOME/.cache/android
+    - mkdir -p $HOME/.tmp
+    - mkdir -p $pwd/Build
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
     - chmod +x ./Scripts/install_unity_android.sh
