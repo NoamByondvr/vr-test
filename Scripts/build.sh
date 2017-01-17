@@ -12,20 +12,10 @@ echo "Attempting to build Android"
   -batchmode \
   -nographics \
   -silent-crashes \
-  -logFile $(pwd)/unity.log \
+  -logFile $(pwd)/Build/unity.log \
   -projectPath $(pwd) \
   -quit \
   -executeMethod BuildMyGame.BuildAndroid "$(pwd)/Build/android/android.apk"
 
-echo "ls -l"
-ls -l
-
-echo "ls -l $(pwd)/Build"
-ls -l $(pwd)/Build
-
-echo "ls -l $(pwd)/Build/android"
-ls -l $(pwd)/Build/android
-
-echo "git ls-files -o"
-git ls-files -o
-
+echo 'Logs from build'
+cat $(pwd)/Build/unity.log
