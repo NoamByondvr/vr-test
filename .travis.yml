@@ -1,8 +1,11 @@
 language: objective-c
+env:
+    - DOWNLOAD_DIR=$HOME/.cache/downloads
+    - ANDROID_DIR=$HOME/.cache/android
 cache:
     bundler: true
     directories:
-        - $HOME/.cache/downloads
+        - $HOME/.cache
         - $HOME/Applications
 osx_image: xcode8.2
 before_install:

@@ -1,12 +1,9 @@
 #! /bin/sh
 
-BASE_URL=http://download.unity3d.com/download_unity
 HASH=5a3967d8c55d
 VERSION=5.4.4f1
+BASE_URL=http://download.unity3d.com/download_unity
 
-DOWNLOAD_DIR=$HOME/.cache/downloads
-
-mkdir -p $(pwd)/unity
 
 download() {
     url=$1
@@ -25,6 +22,7 @@ install() {
     then
         echo "File $DST_ZIP exist."
     else
+        mkdir -p $(DOWNLOAD_DIR)
         download "$BASE_URL/$HASH/$package" "$DOWNLOAD_DIR/$file_name"
 
     	echo "Installing $DOWNLOAD_DIR/$file_name"
