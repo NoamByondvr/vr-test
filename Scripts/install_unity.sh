@@ -1,10 +1,5 @@
 #! /bin/sh
 
-DOWNLOAD_DIR=$HOME/.cache/downloads
-ANDROID_DIR=$HOME/.cache/android
-TMP=$HOME/.tmp
-BUILD_DIR=$pwd/../Build
-
 HASH=5a3967d8c55d
 VERSION=5.4.4f1
 BASE_URL=http://download.unity3d.com/download_unity

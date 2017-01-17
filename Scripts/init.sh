@@ -1,6 +1,11 @@
 #! /bin/sh
 
-mkdir -p $HOME/.cache/downloads
-mkdir -p $HOME/.cache/android
-mkdir -p $HOME/.tmp
-mkdir -p $pwd/../Build
+export DOWNLOAD_DIR=$HOME/.cache/downloads
+export ANDROID_DIR=$HOME/.cache/android
+export TMP=$HOME/.tmp
+export BUILD_DIR=$pwd/../Build
+
+mkdir -p $DOWNLOAD_DIR
+mkdir -p $ANDROID_DIR
+mkdir -p $TMP
+mkdir -p $BUILD_DIR

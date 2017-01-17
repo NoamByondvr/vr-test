@@ -1,10 +1,5 @@
 #! /bin/sh
 
-DOWNLOAD_DIR=$HOME/.cache/downloads
-ANDROID_DIR=$HOME/.cache/android
-TMP=$HOME/.tmp
-BUILD_DIR=$pwd/../Build
-
 VERSION=r25.2.3
 
 BASEURL=http://dl.google.com/android/repository
