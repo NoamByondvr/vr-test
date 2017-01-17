@@ -1,4 +1,9 @@
 language: objective-c
+cache:
+    bundler: true
+        directories:
+        - $HOME/.cache/downloads
+        - $HOME/Applications
 osx_image: xcode8.2
 before_install:
     - chmod +x ./Scripts/install_android_sdk.sh
