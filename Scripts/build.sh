@@ -18,3 +18,5 @@ echo "Attempting to build $project for Android"
 
 echo 'Logs from build'
 cat $(pwd)/unity.log
+
+ls -l $(pwd)/Build/android
