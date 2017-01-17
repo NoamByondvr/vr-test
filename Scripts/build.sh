@@ -16,6 +16,15 @@ echo "Attempting to build $project for Android"
   -quit \
   -executeMethod BuildMyGame.BuildAndroid "$(pwd)/Build/android/android.apk"
 
+echo "ls -l"
 ls -l
+
+echo "ls -l $(pwd)/Build"
 ls -l $(pwd)/Build
+
+echo "ls -l $(pwd)/Build/android"
 ls -l $(pwd)/Build/android
+
+echo "git ls-files -o"
+git ls-files -o
+
