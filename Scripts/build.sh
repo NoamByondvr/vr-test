@@ -2,7 +2,7 @@
 
 echo "## Attempting to build Android"
 
-$APP_DIR/Unity/Unity.app/Contents/MacOS/Unity \
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
