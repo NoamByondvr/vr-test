@@ -24,22 +24,22 @@ else
     sudo unzip $DST_ZIP -d $ANDROID_DIR
 fi
 
-echo "y" | sudo $ANDROID_DIR/tools/android update sdk --no-ui --all --filter /
-tool,platform-tool,/
-build-tools-25.0.2,/
-build-tools-25.0.1,/
-android-25,/
-android-23,/
-android-24.0.3,/
-android-24.0.2,/
-android-24.0.1,/
-android-24,/
-android-23.0.3,/
-android-23.0.2,/
-android-23.0.1,/
-android-22.0.1,/
-android-21.1.2,/
-android-20,/
+echo "y" | sudo $ANDROID_DIR/tools/android update sdk --no-ui --all --filter \
+tool,platform-tool,\
+build-tools-25.0.2,\
+build-tools-25.0.1,\
+android-25,\
+android-23,\
+android-24.0.3,\
+android-24.0.2,\
+android-24.0.1,\
+android-24,\
+android-23.0.3,\
+android-23.0.2,\
+android-23.0.1,\
+android-22.0.1,\
+android-21.1.2,\
+android-20,\
 android-19.1
 
 export ANDROID_HOME=$ANDROID_DIR/android-sdk-macosx
