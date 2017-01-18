@@ -21,12 +21,12 @@ install() {
 
     if [ -f "$target_file" ];
     then
-        echo "File $target_file exist."
+        echo "## File $target_file exist."
     else
         download "$target_file" "$target_url"
     fi
 
-    echo "Installing $DOWNLOAD_DIR/$file_name"
+    echo "## Installing $DOWNLOAD_DIR/$file_name"
     sudo installer -dumplog -package $DOWNLOAD_DIR/$file_name -target /
 }
 
