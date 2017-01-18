@@ -22,10 +22,19 @@ then
 else
     echo "## unzip $DST_ZIP -d $ANDROID_DIR"
     unzip $DST_ZIP -d $ANDROID_DIR
-
-    echo "y" | $ANDROID_DIR/tools/android update sdk --no-ui --all --filter /
-    tool,platform-tool,android-23,android-24,android-25,build-tools-25.0.1,build-tools-25.0.2
 fi
+
+echo "y" | $ANDROID_DIR/tools/android update sdk --no-ui --all --filter /
+tool,platform-tool,
+build-tools-25.0.2,/
+build-tools-25.0.1,/
+android-25,/
+android-23,/
+android-24.0.3,/
+android-24.0.2,/
+android-24.0.1,/
+android-24,/
+android-23.0.3
 
 export ANDROID_HOME=$ANDROID_DIR/android-sdk-macosx
 export PATH=$PATH:$ANDROID_HOME/tools
