@@ -30,9 +30,9 @@ install() {
     sudo installer -dumplog -package $DOWNLOAD_DIR/$file_name -target /
 }
 
-if [ -f "$HOME/Applications/Unity/Unity.app/Contents/MacOS/Unity" ];
+if [ -f "$APP_DIR/Unity/Unity.app/Contents/MacOS/Unity" ];
 then
-    echo "## File $HOME/Applications/Unity/Unity.app/Contents/MacOS/Unity exist."
+    echo "## File $APP_DIR/Applications/Unity/Unity.app/Contents/MacOS/Unity exist."
 else
     install "MacEditorInstaller/Unity-$VERSION.pkg" "$VERSION.pkg"
 fi

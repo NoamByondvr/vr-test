@@ -14,6 +14,7 @@ before_install:
     - export ANDROID_DIR=$(HOME)/.cache/android
     - export BUILD_DIR=$(pwd)/Build
     - export PROJECT_PATH=$(pwd)
+    - export APP_DIR=$(pwd)/Applications
 
     - sudo mkdir -p $DOWNLOAD_DIR
     - sudo mkdir -p $ANDROID_DIR
