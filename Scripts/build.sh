@@ -12,4 +12,4 @@ echo "## Attempting to build Android"
   -executeMethod BuildMyGame.BuildAndroid Build/android.apk
 
 echo '## Logs from build'
-cat $BUILD_DIR/unity.log
+cat Build/unity.log
