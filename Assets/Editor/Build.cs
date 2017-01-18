@@ -8,6 +8,7 @@ public class BuildMyGame {
 
     public static void BuildAndroid() {
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
+        EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
         Build(BuildTarget.Android);
     }
 
@@ -30,5 +31,23 @@ public class BuildMyGame {
             Debug.LogError(err);
             throw new System.Exception("Error in Building");
         }
+    }
+}
+
+public class EditorSetup {
+    public static string AndroidSdkRoot {
+        get { return EditorPrefs.GetString("AndroidSdkRoot"); }
+        set { EditorPrefs.SetString("AndroidSdkRoot", value); }
+    }
+
+    public static string JdkRoot {
+        get { return EditorPrefs.GetString("JdkPath"); }
+        set { EditorPrefs.SetString("JdkPath", value); }
+    }
+
+    // This requires Unity 5.3 or later
+    public static string AndroidNdkRoot {
+        get { return EditorPrefs.GetString("AndroidNdkRoot"); }
+        set { EditorPrefs.SetString("AndroidNdkRoot", value); }
     }
 }
