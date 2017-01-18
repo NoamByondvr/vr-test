@@ -24,7 +24,7 @@ install() {
     then
         echo "File $target_file exist."
     else
-        download "target_file" "$target_url"
+        download "$target_file" "$target_url"
 
     	echo "Installing $DOWNLOAD_DIR/$file_name"
     	sudo installer -dumplog -package $DOWNLOAD_DIR/$file_name -target /
