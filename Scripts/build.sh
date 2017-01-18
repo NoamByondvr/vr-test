@@ -7,7 +7,7 @@ echo "## Attempting to build Android"
   -nographics \
   -silent-crashes \
   -logFile $BUILD_DIR/unity.log \
-  -projectPath $(pwd) \
+  -projectPath $PROJECT_PATH \
   -quit \
   -executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
 
