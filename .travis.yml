@@ -6,19 +6,24 @@ cache:
         - $HOME/.cache
         - $HOME/Applications
 before_install:
+    - export BRANCH=v1.3.0
+    - export REPO_NAME=vr-app-2.0
+
     - export DOWNLOAD_DIR=$(HOME)/.cache/downloads
     - export ANDROID_DIR=$(HOME)/.cache/android
     - export BUILD_DIR=$(pwd)/Build
-    - export PROJECT_PATH=$(pwd)
+    - export PROJECT_PATH=$(pwd)/$REPO_NAME
 
-    - mkdir -p $DOWNLOAD_DIR
-    - mkdir -p $ANDROID_DIR
+    - sudo mkdir -p $DOWNLOAD_DIR
+    - sudo mkdir -p $ANDROID_DIR
     - sudo mkdir -p $BUILD_DIR
 
+    - chmod +x ./Scripts/get_repo.sh
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
     - chmod +x ./Scripts/install_unity_android.sh
 install:
+    - "./Scripts/get_repo.sh"
     - "./Scripts/install_android_sdk.sh"
     - "./Scripts/install_unity.sh"
 script:
