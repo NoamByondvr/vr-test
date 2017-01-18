@@ -21,11 +21,12 @@ before_install:
 
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
+
+    - ./Scripts/install_android_sdk.sh
 install:
-    - "./Scripts/install_android_sdk.sh"
-    - "./Scripts/install_unity.sh"
+    - ./Scripts/install_unity.sh
 script:
-    - "./Scripts/build.sh"
+    - ./Scripts/build.sh
 deploy:
     provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID

@@ -24,6 +24,12 @@ else
     sudo unzip $DST_ZIP -d $ANDROID_DIR
 fi
 
+export ANDROID_HOME=$ANDROID_DIR
+export PATH=$PATH:$ANDROID_HOME
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 echo "y" | sudo $ANDROID_DIR/tools/android update sdk --no-ui --all --filter \
 tool,platform-tool,\
 build-tools-25.0.2,\
@@ -41,9 +47,3 @@ android-22.0.1,\
 android-21.1.2,\
 android-20,\
 android-19.1
-
-export ANDROID_HOME=$ANDROID_DIR
-export PATH=$PATH:$ANDROID_HOME
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export JAVA_HOME=$(/usr/libexec/java_home)
