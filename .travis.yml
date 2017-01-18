@@ -16,12 +16,10 @@ before_install:
     - mkdir -p $TMP
     - sudo mkdir -p $BUILD_DIR
 
-    - chmod +x ./Scripts/init.sh
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
     - chmod +x ./Scripts/install_unity_android.sh
 install:
-    - "./Scripts/init.sh"
     - "./Scripts/install_android_sdk.sh"
     - "./Scripts/install_unity.sh"
 script:
