@@ -5,6 +5,7 @@ cache:
     directories:
         - $HOME/.cache
         - $HOME/Applications
+        - $pwd/Applications
 before_install:
     - export DOWNLOAD_DIR=$HOME/.cache/downloads
     - export ANDROID_DIR=$HOME/.cache/android
