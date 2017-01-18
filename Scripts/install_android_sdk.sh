@@ -25,7 +25,7 @@ else
 fi
 
 echo "y" | $ANDROID_DIR/tools/android update sdk --no-ui --all --filter /
-tool,platform-tool,
+tool,platform-tool,/
 build-tools-25.0.2,/
 build-tools-25.0.1,/
 android-25,/
