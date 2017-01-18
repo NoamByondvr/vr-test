@@ -11,7 +11,7 @@ before_install:
     - chmod +x ./Scripts/install_unity.sh
     - chmod +x ./Scripts/install_unity_android.sh
 install:
-    - "./Script/init.sh"
+    - "./Scripts/init.sh"
     - "./Scripts/install_android_sdk.sh"
     - "./Scripts/install_unity.sh"
 script:
