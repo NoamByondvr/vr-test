@@ -22,6 +22,11 @@ public class BuildMyGame {
         string path = Environment.GetCommandLineArgs().Last();
         if (!Directory.Exists(Path.GetDirectoryName(path)))
             Directory.CreateDirectory(Path.GetDirectoryName(path));
-        BuildPipeline.BuildPlayer(levels.ToArray(), path, target, BuildOptions.None);
+        string err = BuildPipeline.BuildPlayer(levels.ToArray(), path, target, BuildOptions.None);
+        if (!string.IsNullOrEmpty(err))
+        {
+            Debug.LogError(err);
+            throw new System.Exception("Error in Building");
+        }
     }
 }
