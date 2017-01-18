@@ -1,6 +1,6 @@
 #! /bin/sh
 
-VERSION=r25.2.3
+VERSION=r25.2.5
 
 BASEURL=http://dl.google.com/android/repository
 URL=$BASEURL/tools_$VERSION-macosx.zip
