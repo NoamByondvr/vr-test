@@ -5,6 +5,7 @@ cache:
     directories:
         - $HOME/.cache
         - $HOME/Applications
+        - /Applications
 before_install:
     - export BRANCH=v1.3.0
     - export REPO_NAME=vr-app-2.0
