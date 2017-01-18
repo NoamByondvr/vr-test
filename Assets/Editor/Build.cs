@@ -8,7 +8,7 @@ public class BuildMyGame {
 
     public static void BuildAndroid() {
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
-        EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
+        //EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
         Build(BuildTarget.Android);
     }
 

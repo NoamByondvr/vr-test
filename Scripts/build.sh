@@ -15,8 +15,9 @@ echo "## Attempting to build Android"
   -logFile $BUILD_DIR/unity.log \
   -projectPath $PROJECT_PATH \
   -quit \
-  -androidSdkPath $ANDROID_DIR \
   -executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
+
+#  -androidSdkPath $ANDROID_DIR \
 
 # can add -serial $UNITY_SERIAL
 # sleep 1m
