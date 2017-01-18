@@ -6,10 +6,10 @@ echo "## Attempting to build Android"
   -batchmode \
   -nographics \
   -silent-crashes \
-  -logFile Build/unity.log \
+  -logFile $BUILD_DIR/unity.log \
   -projectPath $(pwd) \
   -quit \
-  -executeMethod BuildMyGame.BuildAndroid Build/android.apk
+  -executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity.log
