@@ -1,6 +1,5 @@
 language: objective-c
 osx_image: xcode8.2
-sudo: required
 cache:
     bundler: true
     directories:
