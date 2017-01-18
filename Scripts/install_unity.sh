@@ -24,10 +24,10 @@ install() {
         echo "File $target_file exist."
     else
         download "$target_file" "$target_url"
-
-    	echo "Installing $DOWNLOAD_DIR/$file_name"
-    	sudo installer -dumplog -package $DOWNLOAD_DIR/$file_name -target /
     fi
+
+    echo "Installing $DOWNLOAD_DIR/$file_name"
+    sudo installer -dumplog -package $DOWNLOAD_DIR/$file_name -target /
 }
 
 install "MacEditorInstaller/Unity-$VERSION.pkg" "$VERSION.pkg"
