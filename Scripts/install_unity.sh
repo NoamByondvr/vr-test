@@ -37,4 +37,5 @@ else
     install "MacEditorInstaller/Unity-$VERSION.pkg" "$VERSION.pkg"
 fi
 
-install "MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg" "unity.pkg"
+install "MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg" "android-unity.pkg"
+install "MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-$VERSION.pkg" "ios-unity.pkg"
