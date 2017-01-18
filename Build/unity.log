@@ -1,0 +1,37 @@
+
+LICENSE SYSTEM [2017118 10:16:1] Next license update check is after 2017-01-18T13:12:26
+
+Built from '5.4/release' branch; Version is '5.4.2f2 (b7e030c65c9b) revision 12050480'; Using compiler version '160040219'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16245 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Editor/Data/Mono/lib/mono/2.0'
+Mono path[2] = 'C:/Program Files/Unity/Editor/Data/UnityScript'
+Mono config path = 'C:/Program Files/Unity/Editor/Data/Mono/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56500
+
+ BATCHMODE ARGUMENTS:
+
+C:\Program Files\Unity\Editor\Unity.exe
+-batchmode
+-nographics
+-silent-crashes
+-logFile
+C:\Users\Noam\Google Drive\Byondata\unity\vr-test-travis\Build\unity.log
+-projectPath
+C:\Users\Noam\Google Drive\Byondata\unity\vr-test-travis
+-quit
+-executeMethod
+BuildMyGame.BuildAndroid
+C:\Users\Noam\Google Drive\Byondata\unity\vr-test-travis\Build.Build.apk
+Successfully changed project path to: C:\Users\Noam\Google Drive\Byondata\unity\vr-test-travis
+C:/Users/Noam/Google Drive/Byondata/unity/vr-test-travis
+It looks like another Unity instance is running with this project open.
+
+Multiple Unity instances cannot open the same project.
+
+Project: C:/Users/Noam/Google Drive/Byondata/unity/vr-test-travis
+ 
+(Filename: C:/buildslave/unity/build/Editor/Src/Application.cpp Line: 358)
+

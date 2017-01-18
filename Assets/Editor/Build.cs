@@ -2,6 +2,7 @@
 using System.Linq;
 using System.IO;
 using UnityEditor;
+using UnityEngine;
 
 public class BuildMyGame {
 
