@@ -27,7 +27,7 @@ install() {
     fi
 
     echo "## Installing $DOWNLOAD_DIR/$file_name"
-    sudo installer -dumplog -package $DOWNLOAD_DIR/$file_name -target /
+    installer -dumplog -package $DOWNLOAD_DIR/$file_name -target /
 }
 
 if [ -f "$HOME/Applications/Unity/Unity.app/Contents/MacOS/Unity" ];

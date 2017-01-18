@@ -1,5 +1,6 @@
 language: objective-c
 osx_image: xcode8.2
+sudo: required
 cache:
     bundler: true
     directories:
@@ -14,9 +15,9 @@ before_install:
     - export BUILD_DIR=$(pwd)/Build
     - export PROJECT_PATH=$(pwd)/$REPO_NAME
 
-    - sudo mkdir -p $DOWNLOAD_DIR
-    - sudo mkdir -p $ANDROID_DIR
-    - sudo mkdir -p $BUILD_DIR
+    - mkdir -p $DOWNLOAD_DIR
+    - mkdir -p $ANDROID_DIR
+    - mkdir -p $BUILD_DIR
 
     - chmod +x ./Scripts/get_repo.sh
     - chmod +x ./Scripts/install_android_sdk.sh
