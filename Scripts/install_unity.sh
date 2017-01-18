@@ -14,7 +14,6 @@ download() {
 }
 
 install() {
-
     package=$1
     file_name=$2
     target_url=$BASE_URL/$HASH/$package
