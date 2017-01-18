@@ -13,18 +13,16 @@ before_install:
     - export DOWNLOAD_DIR=$(HOME)/.cache/downloads
     - export ANDROID_DIR=$(HOME)/.cache/android
     - export BUILD_DIR=$(pwd)/Build
-    - export PROJECT_PATH=$(pwd)/$REPO_NAME
+    - export PROJECT_PATH=$(pwd)
 
     - mkdir -p $DOWNLOAD_DIR
     - mkdir -p $ANDROID_DIR
     - mkdir -p $BUILD_DIR
 
-    - chmod +x ./Scripts/get_repo.sh
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
     - chmod +x ./Scripts/install_unity_android.sh
 install:
-    - "./Scripts/get_repo.sh"
     - "./Scripts/install_android_sdk.sh"
     - "./Scripts/install_unity.sh"
 script:
