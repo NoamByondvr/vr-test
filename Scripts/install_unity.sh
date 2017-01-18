@@ -10,7 +10,7 @@ download() {
     dst=$1
     echo "## Downloading from: $url"
     echo "## to: $dst"
-    curl -o $dst $url
+    sudo curl -o $dst $url
 }
 
 install() {

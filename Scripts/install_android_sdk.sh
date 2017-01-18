@@ -13,7 +13,7 @@ then
 else
 
     echo "## curl -o $DST_ZIP $URL"
-    curl -o $DST_ZIP $URL
+    sudo curl -o $DST_ZIP $URL
 fi
 
 if [ -f "$ANDROID_DIR/tools/android" ];
@@ -21,10 +21,10 @@ then
     echo "## File $ANDROID_DIR/tools/android exist."
 else
     echo "## unzip $DST_ZIP -d $ANDROID_DIR"
-    unzip $DST_ZIP -d $ANDROID_DIR
+    sudo unzip $DST_ZIP -d $ANDROID_DIR
 fi
 
-echo "y" | $ANDROID_DIR/tools/android update sdk --no-ui --all --filter /
+echo "y" | sudo $ANDROID_DIR/tools/android update sdk --no-ui --all --filter /
 tool,platform-tool,/
 build-tools-25.0.2,/
 build-tools-25.0.1,/
