@@ -31,7 +31,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 echo "y" | sudo $ANDROID_DIR/tools/android update sdk --no-ui --all --filter \
-tool,platform-tool,\
+tool,\
+platform-tool,\
 build-tools-25.0.2,\
 build-tools-25.0.1,\
 android-25,\
@@ -46,4 +47,7 @@ android-23.0.1,\
 android-22.0.1,\
 android-21.1.2,\
 android-20,\
-android-19.1
+android-19.1,\
+android-19
+
+brew install ant
