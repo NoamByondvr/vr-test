@@ -7,6 +7,7 @@ using UnityEngine;
 public class BuildMyGame {
 
     public static void BuildAndroid() {
+        PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
         Build(BuildTarget.Android);
     }
 
