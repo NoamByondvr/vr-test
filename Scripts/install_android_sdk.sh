@@ -34,7 +34,13 @@ android-24.0.3,/
 android-24.0.2,/
 android-24.0.1,/
 android-24,/
-android-23.0.3
+android-23.0.3,/
+android-23.0.2,/
+android-23.0.1,/
+android-22.0.1,/
+android-21.1.2,/
+android-20,/
+android-19.1
 
 export ANDROID_HOME=$ANDROID_DIR/android-sdk-macosx
 export PATH=$PATH:$ANDROID_HOME/tools
