@@ -42,7 +42,7 @@ android-21.1.2,\
 android-20,\
 android-19.1
 
-export ANDROID_HOME=$ANDROID_DIR/android-sdk-macosx
+export ANDROID_HOME=$ANDROID_DIR
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=$(/usr/libexec/java_home)
