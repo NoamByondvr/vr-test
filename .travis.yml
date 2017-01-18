@@ -15,9 +15,9 @@ before_install:
     - export BUILD_DIR=$(pwd)/Build
     - export PROJECT_PATH=$(pwd)
 
-    - mkdir -p $DOWNLOAD_DIR
-    - mkdir -p $ANDROID_DIR
-    - mkdir -p $BUILD_DIR
+    - sudo mkdir -p $DOWNLOAD_DIR
+    - sudo mkdir -p $ANDROID_DIR
+    - sudo mkdir -p $BUILD_DIR
 
     - chmod +x ./Scripts/install_android_sdk.sh
     - chmod +x ./Scripts/install_unity.sh
