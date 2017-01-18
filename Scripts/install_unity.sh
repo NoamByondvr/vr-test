@@ -38,4 +38,4 @@ else
 fi
 
 install "MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg" "android-unity.pkg"
-install "MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-$VERSION.pkg" "ios-unity.pkg"
+#install "MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-$VERSION.pkg" "ios-unity.pkg"
