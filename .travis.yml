@@ -9,7 +9,7 @@ cache:
 before_install:
     - export DOWNLOAD_DIR=$HOME/.cache/downloads
     - export ANDROID_DIR=$HOME/.cache/android
-    - export BUILD_DIR=$pwd/../Build
+    - export BUILD_DIR=$pwd/Build
 
     - mkdir -p $DOWNLOAD_DIR
     - mkdir -p $ANDROID_DIR
