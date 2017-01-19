@@ -49,5 +49,3 @@ android-21.1.2,\
 android-20,\
 android-19.1,\
 android-19
-
-brew install ant
