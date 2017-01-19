@@ -13,6 +13,10 @@ public class BuildMyGame {
         Build(BuildTarget.Android);
     }
 
+    public static void BuildiOS() {
+        Build(BuildTarget.iOS);
+    }
+
     public static void BuildOSX() {
         Build(BuildTarget.StandaloneOSXIntel64);
     }

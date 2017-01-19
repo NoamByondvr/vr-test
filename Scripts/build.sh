@@ -15,7 +15,7 @@ echo "## Attempting to build Android"
   -logFile $BUILD_DIR/unity.log \
   -projectPath $PROJECT_PATH \
   -quit \
-  -executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
+  -executeMethod BuildMyGame.BuildiOS $BUILD_DIR/android.apk
 
 #  -androidSdkPath $ANDROID_DIR \
 
