@@ -7,24 +7,25 @@ URL=$BASEURL/tools_$VERSION-macosx.zip
 
 DST_ZIP=$DOWNLOAD_DIR/android-sdk.zip
 
-if [ -f "$DST_ZIP" ];
-then
-   echo "## File $DST_ZIP exist."
-else
+# if [ -f "$DST_ZIP" ];
+# then
+#    echo "## File $DST_ZIP exist."
+# else
 
-    echo "## curl -o $DST_ZIP $URL"
+#     echo "## curl -o $DST_ZIP $URL"
     sudo curl -o $DST_ZIP $URL
-fi
+# fi
 
-if [ -f "$ANDROID_DIR/tools/android" ];
-then
-    echo "## File $ANDROID_DIR/tools/android exist."
-else
-    echo "## unzip $DST_ZIP -d $ANDROID_DIR"
+# if [ -f "$ANDROID_DIR/tools/android" ];
+# then
+#     echo "## File $ANDROID_DIR/tools/android exist."
+# else
+#     echo "## unzip $DST_ZIP -d $ANDROID_DIR"
     sudo unzip $DST_ZIP -d $ANDROID_DIR
-fi
+# fi
 
 export ANDROID_HOME=$ANDROID_DIR
+export ANDROID_SDK_ROOT=$ANDROID_DIR
 export PATH=$PATH:$ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools

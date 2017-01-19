@@ -30,12 +30,12 @@ install() {
     sudo installer -dumplog -package $DOWNLOAD_DIR/$file_name -target /
 }
 
-if [ -f "$APP_DIR/Unity/Unity.app/Contents/MacOS/Unity" ];
-then
-    echo "## File $APP_DIR/Applications/Unity/Unity.app/Contents/MacOS/Unity exist."
-else
+# if [ -f "$APP_DIR/Unity/Unity.app/Contents/MacOS/Unity" ];
+# then
+#     echo "## File $APP_DIR/Applications/Unity/Unity.app/Contents/MacOS/Unity exist."
+# else
     install "MacEditorInstaller/Unity-$VERSION.pkg" "$VERSION.pkg"
-fi
+# fi
 
 install "MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg" "android-unity.pkg"
 #install "MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-$VERSION.pkg" "ios-unity.pkg"
