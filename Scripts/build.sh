@@ -1,12 +1,21 @@
 #! /bin/sh
 
+echo "##############################"
+echo "##############################"
+echo "##############################"
+echo "##############################"
+ls -l $ANDROID_DIR
+
+echo "## Attempting to build Android"
+
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
-  -logFile $PWD/../Build/unity.log \
-  -projectPath $PWD/../ \
+  -silent-crashes \
+  -logFile $BUILD_DIR/unity.log \
+  -projectPath $PROJECT_PATH \
   -quit \
-  -executeMethod BuildMyGame.BuildAndroid $PWD/../Build/android.apk
+  -executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
 
 #  -androidSdkPath $ANDROID_DIR \
 
@@ -14,4 +23,4 @@
 # sleep 1m
 
 echo '## Logs from build'
-cat $PWD/../Build/unity.log
+cat $BUILD_DIR/unity.log
