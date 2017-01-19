@@ -10,6 +10,7 @@ echo "## Attempting to build Android"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
     -batchmode \
+    -nographics \
     -serial $UNITY_SERIAL
     -silent-crashes \
     -logFile $BUILD_DIR/unity.log \
@@ -18,7 +19,6 @@ echo "## Attempting to build Android"
     -executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
 
 
-#    -nographics \
 
 
 #  -androidSdkPath $ANDROID_DIR \
