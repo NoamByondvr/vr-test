@@ -9,13 +9,17 @@ ls -l $ANDROID_DIR
 echo "## Attempting to build Android"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
-  -batchmode \
-  -nographics \
-  -silent-crashes \
-  -logFile $BUILD_DIR/unity.log \
-  -projectPath $PROJECT_PATH \
-  -quit \
-  -executeMethod BuildMyGame.BuildiOS $BUILD_DIR/android.apk
+    -batchmode \
+    -serial $UNITY_SERIAL
+    -silent-crashes \
+    -logFile $BUILD_DIR/unity.log \
+    -projectPath $PROJECT_PATH \
+    -quit \
+    -executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
+
+
+#    -nographics \
+
 
 #  -androidSdkPath $ANDROID_DIR \
 
