@@ -10,9 +10,9 @@ install:
     - export JAVA_HOME=$(/usr/libexec/java_home)
     - echo "y" | android update sdk --no-ui --all --filter tool,platform-tool,android-19,build-tools-22.0.1
     - brew install ant
-    - curl -o Unity.pkg http://download.unity3d.com/download_unity/38b4efef76f0/MacEditorInstaller/Unity-5.5.0f3.pkg
+    - curl -o Unity.pkg http://download.unity3d.com/download_unity/3757309da7e7/MacEditorInstaller/Unity-5.2.2f1.pkg
     - sudo installer -dumplog -package Unity.pkg -target /
-    - curl -o Unity-android.pkg http://download.unity3d.com/download_unity/38b4efef76f0/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-5.5.0f3.pkg
+    - curl -o Unity-android.pkg http://download.unity3d.com/download_unity/3757309da7e7/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor/Unity-5.2.2f1.pkg
     - sudo installer -dumplog -package Unity-android.pkg -target /
 script:
     - ./Scripts/build.sh
