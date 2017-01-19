@@ -24,13 +24,6 @@ DST_ZIP=$DOWNLOAD_DIR/android-sdk.zip
     sudo unzip $DST_ZIP -d $ANDROID_DIR
 # fi
 
-export ANDROID_HOME=$ANDROID_DIR
-export ANDROID_SDK_ROOT=$ANDROID_DIR
-export PATH=$PATH:$ANDROID_HOME
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 echo "y" | sudo $ANDROID_DIR/tools/android update sdk --no-ui --all --filter \
 tool,\
 platform-tool,\
@@ -51,4 +44,9 @@ android-20,\
 android-19.1,\
 android-19
 
-brew install ant
+export ANDROID_HOME=$ANDROID_DIR
+export ANDROID_SDK_ROOT=$ANDROID_DIR
+export PATH=$PATH:$ANDROID_HOME
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=$(/usr/libexec/java_home)
