@@ -9,7 +9,7 @@ cache:
 before_install:
     - chmod +x install_and_build.sh
 script:
-    - ./install_and_build.sh
+    - travis_wait 30 ./install_and_build.sh
 deploy:
     provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
