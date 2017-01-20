@@ -28,3 +28,12 @@ echo "## Attempting to build Android"
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity.log
+
+echo "## Attempting to return Unity license"
+
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+    -batchmode \
+    -nographics \
+    -silent-crashes \
+    -quit \
+    -returnlicense
