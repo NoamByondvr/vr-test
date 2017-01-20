@@ -56,8 +56,8 @@ echo " #############################################################"
 echo " ##############        INSTALL UNITY         #################"
 echo " #############################################################"
 
-HASH=5a3967d8c55d
-VERSION=5.4.4f1
+HASH=38b4efef76f0
+VERSION=5.5.0f3
 BASE_URL=http://download.unity3d.com/download_unity
 UNITY_URL=$BASE_URL/$HASH/MacEditorInstaller/Unity-$VERSION.pkg
 UNITY_ANDROID_URL=$BASE_URL/$HASH/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg
