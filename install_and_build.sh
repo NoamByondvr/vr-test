@@ -74,14 +74,14 @@ echo " ##############        BUILD ANDROID         #################"
 echo " #############################################################"
 
 travis_wait 20 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
-    -batchmode \
-    -nographics \
-    -serial $UNITY_SERIAL
-    -silent-crashes \
-    -logFile $BUILD_DIR/unity_android.log \
-    -projectPath $PROJECT_PATH \
-    -quit \
-    -executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
+-batchmode \
+-nographics \
+-silent-crashes \
+-serial $UNITY_SERIAL
+-logFile $BUILD_DIR/unity_android.log \
+-projectPath $PROJECT_PATH \
+-quit \
+-executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_android.log
@@ -91,25 +91,25 @@ echo " ##############            BUILD iOS         #################"
 echo " #############################################################"
 
 travis_wait 20 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
-    -batchmode \
-    -nographics \
-    -serial $UNITY_SERIAL
-    -silent-crashes \
-    -logFile $BUILD_DIR/unity_ios.log \
-    -projectPath $PROJECT_PATH \
-    -quit \
-    -executeMethod BuildMyGame.BuildiOS $BUILD_DIR/ios_build
+-batchmode \
+-nographics \
+-silent-crashes \
+-serial $UNITY_SERIAL
+-logFile $BUILD_DIR/unity_ios.log \
+-projectPath $PROJECT_PATH \
+-quit \
+-executeMethod BuildMyGame.BuildiOS $BUILD_DIR/ios_build
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_ios.log
 
 echo "## Attempting to return Unity license"
 travis_wait 20 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
-    -batchmode \
-    -nographics \
-    -silent-crashes \
-    -quit \
-    -returnlicense
+-batchmode \
+-silent-crashes \
+-nographics \
+-quit \
+-returnlicense
 
 echo " #############################################################"
 echo " ##############             THE END            ###############"
