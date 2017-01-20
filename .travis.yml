@@ -7,26 +7,9 @@ cache:
         - $HOME/Applications
         - /Applications
 before_install:
-    - export BRANCH=v1.3.0
-    - export REPO_NAME=vr-app-2.0
-
-    - export DOWNLOAD_DIR=$(HOME)/.cache/downloads
-    - export ANDROID_DIR=$(HOME)/.cache/android
-    - export BUILD_DIR=$(pwd)/Build
-    - export PROJECT_PATH=$(pwd)
-
-    - sudo mkdir -p $DOWNLOAD_DIR
-    - sudo mkdir -p $ANDROID_DIR
-    - sudo mkdir -p $BUILD_DIR
-
-    - chmod +x ./Scripts/install_android_sdk.sh
-    - chmod +x ./Scripts/install_unity.sh
-
-install:
-    - ./Scripts/install_android_sdk.sh
-    - ./Scripts/install_unity.sh
+    - chmod +x install_and_build.sh
 script:
-    - ./Scripts/build.sh
+    - ./install_and_build.sh
 deploy:
     provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
