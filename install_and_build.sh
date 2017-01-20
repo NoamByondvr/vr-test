@@ -73,7 +73,7 @@ echo " #############################################################"
 echo " ##############        BUILD ANDROID         #################"
 echo " #############################################################"
 
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+travis_wait 20 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
     -batchmode \
     -nographics \
     -serial $UNITY_SERIAL
@@ -90,7 +90,7 @@ echo " #############################################################"
 echo " ##############            BUILD iOS         #################"
 echo " #############################################################"
 
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+travis_wait 20 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
     -batchmode \
     -nographics \
     -serial $UNITY_SERIAL
@@ -104,7 +104,7 @@ echo '## Logs from build'
 cat $BUILD_DIR/unity_ios.log
 
 echo "## Attempting to return Unity license"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+travis_wait 20 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
     -batchmode \
     -nographics \
     -silent-crashes \
