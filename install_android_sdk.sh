@@ -8,51 +8,55 @@ export ANDROID_DIR=android
 export BUILD_DIR=Build
 export PROJECT_PATH=$(pwd)
 
-sudo mkdir -p $DOWNLOAD_DIR
-sudo mkdir -p $ANDROID_DIR
-sudo mkdir -p $BUILD_DIR
+mkdir -p $DOWNLOAD_DIR
+mkdir -p $ANDROID_DIR
+mkdir -p $BUILD_DIR
 
 echo " #############################################################"
 echo " ##############      INSTALL ANDROID SDK     #################"
 echo " #############################################################"
+
+ls -l $HOME/Library/Android/sdk/
+
+
 VERSION=r25.2.5
 
 BASEURL=http://dl.google.com/android/repository
 URL=$BASEURL/tools_$VERSION-macosx.zip
 
 DST_ZIP=$DOWNLOAD_DIR/android-sdk.zip
-sudo curl -o $DST_ZIP $URL
-sudo unzip $DST_ZIP -d $ANDROID_DIR
+curl -o $DST_ZIP $URL
+unzip $DST_ZIP -d $ANDROID_DIR
 
 export ANDROID_HOME=$ANDROID_DIR
 export PATH=${PATH}:$ANDROID_DIR/tools
 export PATH=${PATH}:$ANDROID_DIR/platform-tools
 export PATH=${PATH}:$ANDROID_DIR
 
-echo yes | sudo android update sdk --filter platform-tool --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter tool --no-ui --force > /dev/null
+echo yes | android update sdk --filter platform-tool --no-ui --force > /dev/null
+echo yes | android update sdk --filter tool --no-ui --force > /dev/null
 
-echo yes | sudo android update sdk --filter android-25 --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter android-24 --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter android-23 --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter android-22 --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter android-21 --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter android-19 --no-ui --force > /dev/null
+echo yes | android update sdk --filter android-25 --no-ui --force > /dev/null
+echo yes | android update sdk --filter android-24 --no-ui --force > /dev/null
+echo yes | android update sdk --filter android-23 --no-ui --force > /dev/null
+echo yes | android update sdk --filter android-22 --no-ui --force > /dev/null
+echo yes | android update sdk --filter android-21 --no-ui --force > /dev/null
+echo yes | android update sdk --filter android-19 --no-ui --force > /dev/null
 
-echo yes | sudo android update sdk --filter build-tools-25.0.2 --all --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter build-tools-25.0.1 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-25.0.2 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-25.0.1 --all --no-ui --force > /dev/null
 
-echo yes | sudo android update sdk --filter build-tools-24.0.3 --all --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter build-tools-24.0.2 --all --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter build-tools-24.0.1 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-24.0.3 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-24.0.2 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-24.0.1 --all --no-ui --force > /dev/null
 
-echo yes | sudo android update sdk --filter build-tools-23.0.3 --all --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter build-tools-23.0.2 --all --no-ui --force > /dev/null
-echo yes | sudo android update sdk --filter build-tools-23.0.1 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-23.0.3 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-23.0.2 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-23.0.1 --all --no-ui --force > /dev/null
 
-echo yes | sudo android update sdk --filter build-tools-21.1.2 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-21.1.2 --all --no-ui --force > /dev/null
 
-echo yes | sudo android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
+echo yes | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
 
 
 
