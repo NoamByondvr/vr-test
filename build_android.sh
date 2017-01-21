@@ -24,10 +24,11 @@ ls -l $ANDROID_DIR/build-tools
 -nographics \
 -androidSdkPath $ANDROID_DIR \
 -serial $UNITY_SERIAL \
+-buildpath $BUILD_DIR/android.apk \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
 -quit \
--executeMethod BuildMyGame.BuildAndroid $BUILD_DIR/android.apk
+-executeMethod BuildMyGame.BuildAndroid
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_android.log

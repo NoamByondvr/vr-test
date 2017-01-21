@@ -6,12 +6,25 @@ using UnityEngine;
 
 public class BuildMyGame {
 
+    [MenuItem("Build/Build Android", false, 0)]
     public static void BuildAndroid() {
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
+
         PlayerSettings.bundleIdentifier = "com.ccccc.ppppp";
-        EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
-        EditorSetup.JdkRoot = Environment.GetEnvironmentVariable("jdkRoot");
+        set_keystore("Assets\\Editor\\keystore\\testing.keystore", "testing", "testing", "testing");
+
+        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidSdkPath")))
+            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
+
         Build(BuildTarget.Android);
+    }
+
+    public static void set_keystore(string path, string keystore_pass, string keyalias_name, string keyalias_pass)
+    {
+        PlayerSettings.Android.keystoreName = path;
+        PlayerSettings.Android.keystorePass = keystore_pass;
+        PlayerSettings.Android.keyaliasName = keyalias_name;
+        PlayerSettings.Android.keyaliasPass = keyalias_pass;
     }
 
     public static void BuildiOS() {
@@ -28,10 +41,14 @@ public class BuildMyGame {
 
     public static void Build(BuildTarget target) {
 		string[] levels = new string[1]{"Assets/main.unity"};
-        string path = Environment.GetCommandLineArgs().Last();
+        
+        string path = "C:/Users/Noam/Google Drive/Byondata/unity/vr-test-travis/Build/android.apk";
+        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("buildpath")))
+            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("buildpath");
+            
         if (!Directory.Exists(Path.GetDirectoryName(path)))
             Directory.CreateDirectory(Path.GetDirectoryName(path));
-        string err = BuildPipeline.BuildPlayer(levels.ToArray(), path, target, BuildOptions.None);
+        string err = BuildPipeline.BuildPlayer(levels, path, target, BuildOptions.None);
         if (!string.IsNullOrEmpty(err))
         {
             Debug.LogError(err);
