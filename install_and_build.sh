@@ -76,7 +76,6 @@ echo " #############################################################"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--serial $UNITY_SERIAL \
 -androidSdkPath $ANDROID_DIR/tool \
 -jdkRoot /usr/libexec/java_home \
 -logFile $BUILD_DIR/unity_android.log \
