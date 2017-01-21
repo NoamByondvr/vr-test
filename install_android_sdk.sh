@@ -21,11 +21,10 @@ brew install ant
 wget http://dl.google.com/android/repository/tools_$VERSION-macosx.zip
 unzip tools_$VERSION-macosx.zip
 
-export ANDROID_HOME=$PWD
-export ANDROID_SDK_ROOT=${ANDROID_HOME}
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-export PATH=${PATH}:${ANDROID_HOME}
+export ANDROID_HOME=/Library/Android/sdk/
+export PATH=${PATH}:$PWD/tools
+export PATH=${PATH}:$PWD/platform-tools
+export PATH=${PATH}:$PWD
 
 echo yes | android update sdk --filter platform-tools --no-ui --force > /dev/null
 echo yes | android update sdk --filter tool --no-ui --force > /dev/null
@@ -35,7 +34,6 @@ echo yes | android update sdk --filter android-24 --no-ui --force > /dev/null
 echo yes | android update sdk --filter android-23 --no-ui --force > /dev/null
 echo yes | android update sdk --filter android-22 --no-ui --force > /dev/null
 echo yes | android update sdk --filter android-21 --no-ui --force > /dev/null
-echo yes | android update sdk --filter android-20 --no-ui --force > /dev/null
 echo yes | android update sdk --filter android-19 --no-ui --force > /dev/null
 
 echo yes | android update sdk --filter build-tools-25.0.2 --all --no-ui --force > /dev/null
