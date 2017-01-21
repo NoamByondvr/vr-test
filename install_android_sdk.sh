@@ -22,6 +22,7 @@ wget http://dl.google.com/android/repository/tools_$VERSION-macosx.zip
 unzip tools_$VERSION-macosx.zip
 
 export ANDROID_HOME=$PWD
+export ANDROID_SDK_ROOT=${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${ANDROID_HOME}
