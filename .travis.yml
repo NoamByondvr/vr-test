@@ -1,11 +1,5 @@
 language: objective-c
 osx_image: xcode8.2
-cache:
-    bundler: true
-    directories:
-        - Applications
-        - downloads
-        - android
 before_install:
     - export BRANCH=v1.3.0
     - export REPO_NAME=vr-app-2.0
