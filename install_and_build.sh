@@ -107,7 +107,7 @@ echo " ##############   RETURNING UNITY LICENSE      ###############"
 echo " #############################################################"
 
 echo "## Attempting to return Unity license"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \s
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
 -quit \
