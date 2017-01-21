@@ -76,7 +76,6 @@ echo " #############################################################"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--serial $UNITY_SERIAL
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
 -quit \
@@ -92,7 +91,6 @@ echo " #############################################################"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--serial $UNITY_SERIAL
 -logFile $BUILD_DIR/unity_ios.log \
 -projectPath $PROJECT_PATH \
 -quit \
