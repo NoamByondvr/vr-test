@@ -23,7 +23,7 @@ unzip tools_$VERSION-macosx.zip
 
 ls -ls
 
-export ANDROID_HOME=$PWD/android-sdk-macosx
+export ANDROID_HOME=$PWD
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${ANDROID_HOME}
