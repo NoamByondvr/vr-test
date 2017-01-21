@@ -19,7 +19,7 @@ VERSION=r25.2.5
 
 brew install ant
 wget http://dl.google.com/android/repository/tools_$VERSION-macosx.zip
-unzip android-sdk_$VERSION-macosx.zip
+unzip tools_$VERSION-macosx.zip
 
 ls -ls
 
