@@ -21,7 +21,7 @@ brew install ant
 wget http://dl.google.com/android/repository/tools_$VERSION-macosx.zip
 unzip tools_$VERSION-macosx.zip
 
-export ANDROID_HOME=/Library/Android/sdk/
+export ANDROID_HOME=/Users/travis/Library/Android/sdk
 export PATH=${PATH}:$PWD/tools
 export PATH=${PATH}:$PWD/platform-tools
 export PATH=${PATH}:$PWD
