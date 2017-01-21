@@ -77,7 +77,7 @@ echo " #############################################################"
 -batchmode \
 -nographics \
 -serial $UNITY_SERIAL \
--androidSdkPath $ANDROID_DIR
+-androidSdkPath $ANDROID_DIR \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
 -quit \
