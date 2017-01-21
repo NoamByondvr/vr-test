@@ -22,9 +22,32 @@ wget http://dl.google.com/android/android-sdk_$VERSION-macosx.zip
 unzip android-sdk_$VERSION-macosx.zip
 export ANDROID_HOME=$PWD/android-sdk-macosx
 export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+
 echo yes | android update sdk --filter platform-tools --no-ui --force > /dev/null
-echo yes | android update sdk --filter android-23 --no-ui --force > /dev/null
+echo yes | android update sdk --filter tools --no-ui --force > /dev/null
+echo yes | android update sdk --filter tool --no-ui --force > /dev/null
+
+echo yes | android update sdk --filter android-25 --no-ui --force > /dev/null
+
+echo yes | android update sdk --filter build-tools-25.0.2 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-25.0.1 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-25 --all --no-ui --force > /dev/null
+
+echo yes | android update sdk --filter build-tools-24.0.3 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-24.0.2 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-24.0.1 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-24 --all --no-ui --force > /dev/null
+
 echo yes | android update sdk --filter build-tools-23.0.3 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-23.0.2 --all --no-ui --force > /dev/null
+echo yes | android update sdk --filter build-tools-23.0.1 --all --no-ui --force > /dev/null
+
+echo yes | android update sdk --filter build-tools-21.1.2 --all --no-ui --force > /dev/null
+
+echo yes | android update sdk --filter build-tools-20 --all --no-ui --force > /dev/null
+
+echo yes | android update sdk --filter build-tools-19.1 --all --no-ui --force > /dev/null
+
 echo yes | android update sdk --filter sysimg-23 --no-ui --force > /dev/null
 echo yes | android update sdk --filter extra-android-support --no-ui --force > /dev/null
 echo yes | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
