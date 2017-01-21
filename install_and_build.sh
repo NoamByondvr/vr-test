@@ -76,7 +76,6 @@ echo " #############################################################"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--silent-crashes \
 -serial $UNITY_SERIAL
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
@@ -93,7 +92,6 @@ echo " #############################################################"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--silent-crashes \
 -serial $UNITY_SERIAL
 -logFile $BUILD_DIR/unity_ios.log \
 -projectPath $PROJECT_PATH \
@@ -106,7 +104,6 @@ cat $BUILD_DIR/unity_ios.log
 echo "## Attempting to return Unity license"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
--silent-crashes \
 -nographics \
 -quit \
 -returnlicense
