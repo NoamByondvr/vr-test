@@ -20,8 +20,13 @@ VERSION=r25.2.5
 brew install ant
 wget http://dl.google.com/android/android-sdk_$VERSION-macosx.zip
 unzip android-sdk_$VERSION-macosx.zip
+
+ls -ls
+
 export ANDROID_HOME=$PWD/android-sdk-macosx
-export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+export PATH=${PATH}:${ANDROID_HOME}
 
 echo yes | android update sdk --filter platform-tools --no-ui --force > /dev/null
 echo yes | android update sdk --filter tools --no-ui --force > /dev/null
