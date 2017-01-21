@@ -17,14 +17,17 @@ echo " ##############      INSTALL ANDROID SDK     #################"
 echo " #############################################################"
 VERSION=r25.2.5
 
-brew install ant
-wget http://dl.google.com/android/repository/tools_$VERSION-macosx.zip
-unzip tools_$VERSION-macosx.zip
+BASEURL=http://dl.google.com/android/repository
+URL=$BASEURL/tools_$VERSION-macosx.zip
+
+DST_ZIP=$DOWNLOAD_DIR/android-sdk.zip
+sudo curl -o $DST_ZIP $URL
+sudo unzip $DST_ZIP -d $ANDROID_DIR
 
 export ANDROID_HOME=/Users/travis/Library/Android/sdk
-export PATH=${PATH}:$PWD/tools
-export PATH=${PATH}:$PWD/platform-tools
-export PATH=${PATH}:$PWD
+export PATH=${PATH}:$ANDROID_DIR/tools
+export PATH=${PATH}:$ANDROID_DIR/platform-tools
+export PATH=${PATH}:$ANDROID_DIR
 
 echo yes | android update sdk --filter platform-tools --no-ui --force > /dev/null
 echo yes | android update sdk --filter tool --no-ui --force > /dev/null
