@@ -24,7 +24,7 @@ DST_ZIP=$DOWNLOAD_DIR/android-sdk.zip
 sudo curl -o $DST_ZIP $URL
 sudo unzip $DST_ZIP -d $ANDROID_DIR
 
-export ANDROID_HOME=/Users/travis/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_DIR/tools
 export PATH=${PATH}:$ANDROID_DIR/platform-tools
 export PATH=${PATH}:$ANDROID_DIR

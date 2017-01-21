@@ -17,9 +17,7 @@ echo " #############################################################"
 echo " ##############        BUILD ANDROID         #################"
 echo " #############################################################"
 
-ls -l /Users/travis/Library/Android/sdk
-
-export ANDROID_HOME=/Users/travis/Library/Android/sdk
+ls -l $HOME/Library/Android/sdk
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
