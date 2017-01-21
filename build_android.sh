@@ -23,7 +23,7 @@ ls -l $ANDROID_DIR
 echo "ls -l $HOME/Library/Android/sdk/"
 ls -l $HOME/Library/Android/sdk/
 
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
 -androidSdkPath $ANDROID_DIR \

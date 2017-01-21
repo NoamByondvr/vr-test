@@ -16,7 +16,7 @@ echo " #############################################################"
 echo " ##############            BUILD iOS         #################"
 echo " #############################################################"
 
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
 -serial $UNITY_SERIAL \
