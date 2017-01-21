@@ -16,9 +16,6 @@ echo " #############################################################"
 echo " ##############      INSTALL ANDROID SDK     #################"
 echo " #############################################################"
 
-ls -l $HOME/Library/Android/sdk/
-
-
 VERSION=r25.2.5
 
 BASEURL=http://dl.google.com/android/repository

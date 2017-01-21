@@ -17,7 +17,11 @@ echo " #############################################################"
 echo " ##############        BUILD ANDROID         #################"
 echo " #############################################################"
 
-ls -l $ANDROID_DIR/build-tools
+echo "ls -l $ANDROID_DIR/build-tools"
+ls -l $ANDROID_DIR
+
+echo "ls -l $HOME/Library/Android/sdk/"
+ls -l $HOME/Library/Android/sdk/
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
