@@ -3,7 +3,7 @@ export REPO_NAME=vr-app-2.0
 
 export DOWNLOAD_DIR=$PWD/downloads
 export ANDROID_DIR=$PWD/android
-export BUILD_DIR=$$PWD/Build
+export BUILD_DIR=$PWD/Build
 export PROJECT_PATH=$PWD
 
 mkdir -p $DOWNLOAD_DIR
