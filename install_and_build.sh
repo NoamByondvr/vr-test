@@ -77,6 +77,7 @@ echo " #############################################################"
 -batchmode \
 -nographics \
 -serial $UNITY_SERIAL \
+-androidSdkPath $ANDROID_DIR
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
 -quit \
@@ -85,23 +86,28 @@ echo " #############################################################"
 echo '## Logs from build'
 cat $BUILD_DIR/unity_android.log
 
-echo " #############################################################"
-echo " ##############            BUILD iOS         #################"
-echo " #############################################################"
+# echo " #############################################################"
+# echo " ##############            BUILD iOS         #################"
+# echo " #############################################################"
 
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
--batchmode \
--nographics \
--logFile $BUILD_DIR/unity_ios.log \
--projectPath $PROJECT_PATH \
--quit \
--executeMethod BuildMyGame.BuildiOS $BUILD_DIR/ios_build
+# /Applications/Unity/Unity.app/Contents/MacOS/Unity \
+# -batchmode \
+# -nographics \
+# -serial $UNITY_SERIAL \
+# -logFile $BUILD_DIR/unity_ios.log \
+# -projectPath $PROJECT_PATH \
+# -quit \
+# -executeMethod BuildMyGame.BuildiOS $BUILD_DIR/ios_build
 
-echo '## Logs from build'
-cat $BUILD_DIR/unity_ios.log
+# echo '## Logs from build'
+# cat $BUILD_DIR/unity_ios.log
+
+echo " #############################################################"
+echo " ##############   RETURNING UNITY LICENSE      ###############"
+echo " #############################################################"
 
 echo "## Attempting to return Unity license"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \s
 -batchmode \
 -nographics \
 -quit \

@@ -9,7 +9,7 @@ public class BuildMyGame {
     public static void BuildAndroid() {
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
         PlayerSettings.bundleIdentifier = "com.ccccc.ppppp";
-        //EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
+        EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkRoot");
         Build(BuildTarget.Android);
     }
 
