@@ -20,7 +20,7 @@ echo " #############################################################"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--androidSdkPath $ANDROID_DIR/tool \
+-androidSdkPath $ANDROID_DIR \
 -jdkRoot /usr/libexec/java_home \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
