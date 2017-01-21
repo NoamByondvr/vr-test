@@ -19,12 +19,13 @@ echo " #############################################################"
 sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--serial $UNITY_SERIAL \
 -logFile $BUILD_DIR/unity_ios.log \
--buildpath $BUILD_DIR/android.apk \
+-buildpath $BUILD_DIR/ios_build \
 -projectPath $PROJECT_PATH \
 -quit \
 -executeMethod BuildMyGame.BuildiOS $BUILD_DIR/ios_build
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_ios.log
+
+# -serial $UNITY_SERIAL \

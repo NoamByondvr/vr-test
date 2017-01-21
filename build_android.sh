@@ -17,17 +17,21 @@ echo " #############################################################"
 echo " ##############        BUILD ANDROID         #################"
 echo " #############################################################"
 
-echo "ls -l $ANDROID_DIR/build-tools"
+echo "ls -l $ANDROID_DIR"
 ls -l $ANDROID_DIR
+
+echo "ls -l $ANDROID_DIR/build-tools"
+ls -l $ANDROID_DIR/build-tools
 
 echo "ls -l $HOME/Library/Android/sdk/"
 ls -l $HOME/Library/Android/sdk/
+
+
 
 sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
 -androidSdkPath $ANDROID_DIR \
--serial $UNITY_SERIAL \
 -buildpath $BUILD_DIR/android.apk \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
@@ -36,3 +40,5 @@ sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_android.log
+
+# -serial $UNITY_SERIAL \
