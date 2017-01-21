@@ -24,12 +24,12 @@ DST_ZIP=$DOWNLOAD_DIR/android-sdk.zip
 sudo curl -o $DST_ZIP $URL
 sudo unzip $DST_ZIP -d $ANDROID_DIR
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_HOME=$ANDROID_DIR
 export PATH=${PATH}:$ANDROID_DIR/tools
 export PATH=${PATH}:$ANDROID_DIR/platform-tools
 export PATH=${PATH}:$ANDROID_DIR
 
-echo yes | sudo android update sdk --filter platform-tools --no-ui --force > /dev/null
+echo yes | sudo android update sdk --filter platform-tool --no-ui --force > /dev/null
 echo yes | sudo android update sdk --filter tool --no-ui --force > /dev/null
 
 echo yes | sudo android update sdk --filter android-25 --no-ui --force > /dev/null

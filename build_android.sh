@@ -17,13 +17,13 @@ echo " #############################################################"
 echo " ##############        BUILD ANDROID         #################"
 echo " #############################################################"
 
-ls -l $HOME/Library/Android/sdk
+ls -l $ANDROID_DIR/build-tools
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
 -androidSdkPath $ANDROID_DIR \
--jdkRoot /usr/libexec/java_home \
+-serial $UNITY_SERIAL \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
 -quit \
