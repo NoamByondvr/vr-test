@@ -21,6 +21,7 @@ echo "## Attempting to return Unity license"
 -batchmode \
 -nographics \
 -logFile $BUILD_DIR/unity_returnlicense.log \
+-silent-crashes \
 -quit \
 -returnlicense
 

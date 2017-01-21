@@ -11,7 +11,7 @@ public class BuildMyGame {
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
 
         PlayerSettings.bundleIdentifier = "com.ccccc.ppppp";
-        set_keystore("Assets\\Editor\\keystore\\testing.keystore", "testing", "testing", "testing");
+        set_keystore("Assets/Editor/keystore/testing.keystore", "testing", "testing", "testing");
 
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidSdkPath")))
             EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
@@ -45,7 +45,7 @@ public class BuildMyGame {
         string path = "C:/Users/Noam/Google Drive/Byondata/unity/vr-test-travis/Build/android.apk";
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("buildpath")))
             EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("buildpath");
-            
+
         if (!Directory.Exists(Path.GetDirectoryName(path)))
             Directory.CreateDirectory(Path.GetDirectoryName(path));
         string err = BuildPipeline.BuildPlayer(levels, path, target, BuildOptions.None);

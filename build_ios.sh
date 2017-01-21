@@ -22,6 +22,7 @@ sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -logFile $BUILD_DIR/unity_ios.log \
 -buildpath $BUILD_DIR/ios_build \
 -projectPath $PROJECT_PATH \
+-silent-crashes \
 -quit \
 -executeMethod BuildMyGame.BuildiOS $BUILD_DIR/ios_build
 

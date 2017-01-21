@@ -35,6 +35,7 @@ sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -buildpath $BUILD_DIR/android.apk \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
+-silent-crashes \
 -quit \
 -executeMethod BuildMyGame.BuildAndroid
 
