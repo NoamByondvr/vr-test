@@ -6,7 +6,7 @@ export REPO_NAME=vr-app-2.0
 export DOWNLOAD_DIR=downloads
 export ANDROID_DIR=android
 export BUILD_DIR=Build
-export PROJECT_PATH=$(PWD)
+export PROJECT_PATH=$pwd
 
 sudo mkdir -p $DOWNLOAD_DIR
 sudo mkdir -p $ANDROID_DIR
