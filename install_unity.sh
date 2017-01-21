@@ -25,5 +25,5 @@ UNITY_ANDROID_URL=$BASE_URL/$HASH/MacEditorTargetInstaller/UnitySetup-Android-Su
 curl -o $DOWNLOAD_DIR/unity.pkg $UNITY_URL
 curl -o $DOWNLOAD_DIR/unity_android.pkg $UNITY_ANDROID_URL
 
-installer -dumplog -package $DOWNLOAD_DIR/unity.pkg -target /
-installer -dumplog -package $DOWNLOAD_DIR/unity_android.pkg -target /
+sudo installer -dumplog -package $DOWNLOAD_DIR/unity.pkg -target /
+sudo installer -dumplog -package $DOWNLOAD_DIR/unity_android.pkg -target /
