@@ -20,6 +20,7 @@ echo "## Attempting to return Unity license"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
+-logFile $BUILD_DIR/unity_returnlicense.log \
 -quit \
 -returnlicense
 
