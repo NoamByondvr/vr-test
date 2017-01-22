@@ -29,7 +29,6 @@ ls -l $HOME/Library/Android/sdk/
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
--nographics \
 -buildpath $BUILD_DIR/android.apk \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \

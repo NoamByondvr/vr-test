@@ -19,7 +19,6 @@ echo " #############################################################"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
--nographics \
 -androidSdkPath $ANDROID_DIR \
 -logFile $BUILD_DIR/set_unity_params.log \
 -projectPath $PROJECT_PATH \
