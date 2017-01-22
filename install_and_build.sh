@@ -1,8 +1,8 @@
 export BRANCH=v1.3.0
 export REPO_NAME=vr-app-2.0
 
-export DOWNLOAD_DIR=$PWD/downloads
-export ANDROID_DIR=$PWD/android
+export DOWNLOAD_DIR=$HOME/Downloads
+export ANDROID_DIR=$HOME/Library/Android/sdk
 export BUILD_DIR=$PWD/Build
 export PROJECT_PATH=$PWD
 
