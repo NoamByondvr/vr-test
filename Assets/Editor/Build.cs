@@ -41,8 +41,7 @@ public class BuildMyGame {
 
     public static void Build(BuildTarget target) {
 		string[] levels = new string[1]{"Assets/main.unity"};
-        
-        string path = "C:/Users/Noam/Google Drive/Byondata/unity/vr-test-travis/Build/android.apk";
+        string path = "Build/android.apk";
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("buildpath")))
             EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("buildpath");
 
