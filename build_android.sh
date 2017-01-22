@@ -29,7 +29,9 @@ ls -l $HOME/Library/Android/sdk/
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
+-nographics \
 -buildpath $BUILD_DIR/android.apk \
+-serial $UNITY_SERIAL \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
 -silent-crashes \
@@ -38,5 +40,3 @@ ls -l $HOME/Library/Android/sdk/
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_android.log
-
-# -serial $UNITY_SERIAL \
