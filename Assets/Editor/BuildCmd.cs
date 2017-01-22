@@ -22,7 +22,7 @@ public class BuildCmd {
         if (!string.IsNullOrEmpty (Environment.GetEnvironmentVariable ("androidSdkPath")))
             EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable ("androidSdkPath");
         else
-            EditorSetup.AndroidSdkRoot = "$HOME/Library/Android/sdk";
+            Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "/Library/Android/sdk";
                 
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("jdkPath")))
             EditorSetup.JdkRoot = Environment.GetEnvironmentVariable("jdkPath");
