@@ -4,7 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class BuildMyGame {
+public class Build {
 
     [MenuItem("Build/Build Android", false, 0)]
     public static void BuildAndroid() {
@@ -14,14 +14,16 @@ public class BuildMyGame {
         set_keystore("Assets/Editor/keystore/testing.keystore", "testing", "testing", "testing");
 
         Build(BuildTarget.Android);
-        setEnvParams();
     }
 
-    [MenuItem("Build/Set SDK Path", false, 1)]
     public static void setEnvParams()
     {
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidSdkPath")))
             EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
+        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("jdkPath")))
+            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("jdkPath");
+        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidNdkRoot")))
+            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidNdkRoot");
     }
 
     public static void set_keystore(string path, string keystore_pass, string keyalias_name, string keyalias_pass)

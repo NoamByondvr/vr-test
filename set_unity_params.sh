@@ -12,21 +12,20 @@ mkdir -p $DOWNLOAD_DIR
 mkdir -p $ANDROID_DIR
 mkdir -p $BUILD_DIR
 
+
 echo " #############################################################"
-echo " ##############            BUILD iOS         #################"
+echo " ##############       SET UNITY PARAMS       #################"
 echo " #############################################################"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--logFile $BUILD_DIR/unity_ios.log \
--buildpath $BUILD_DIR/ios_build \
+-androidSdkPath $ANDROID_DIR \
+-logFile $BUILD_DIR/set_unity_params.log \
 -projectPath $PROJECT_PATH \
 -silent-crashes \
 -quit \
--executeMethod Build.BuildiOS $BUILD_DIR/ios_build
+-executeMethod Build.setEnvParams
 
 echo '## Logs from build'
-cat $BUILD_DIR/unity_ios.log
-
-# -serial $UNITY_SERIAL \
+cat $BUILD_DIR/set_unity_params.log

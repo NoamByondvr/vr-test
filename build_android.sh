@@ -30,13 +30,12 @@ ls -l $HOME/Library/Android/sdk/
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--androidSdkPath $ANDROID_DIR \
 -buildpath $BUILD_DIR/android.apk \
 -logFile $BUILD_DIR/unity_android.log \
 -projectPath $PROJECT_PATH \
 -silent-crashes \
 -quit \
--executeMethod BuildMyGame.BuildAndroid
+-executeMethod Build.BuildAndroid
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_android.log

@@ -18,6 +18,7 @@ before_install:
 install:
     - ./install_android_sdk.sh
     - ./install_unity.sh
+    - ./set_unity_params.sh
 script:
     - ./build_android.sh
 deploy:
