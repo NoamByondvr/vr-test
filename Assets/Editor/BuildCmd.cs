@@ -4,12 +4,13 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class Build {
+public class BuildCmd {
 
     [MenuItem("Build/Build Android", false, 0)]
     public static void BuildAndroid() {
-        PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
+        setEnvParams();
 
+        PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
         PlayerSettings.bundleIdentifier = "com.ccccc.ppppp";
         set_keystore("Assets/Editor/keystore/testing.keystore", "testing", "testing", "testing");
 
@@ -21,9 +22,9 @@ public class Build {
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidSdkPath")))
             EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("jdkPath")))
-            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("jdkPath");
+            EditorSetup.JdkRoot = Environment.GetEnvironmentVariable("jdkPath");
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidNdkRoot")))
-            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidNdkRoot");
+            EditorSetup.AndroidNdkRoot = Environment.GetEnvironmentVariable("androidNdkRoot");
     }
 
     public static void set_keystore(string path, string keystore_pass, string keyalias_name, string keyalias_pass)
