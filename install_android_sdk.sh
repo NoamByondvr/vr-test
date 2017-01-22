@@ -30,37 +30,50 @@ export PATH=${PATH}:$ANDROID_DIR/tools
 export PATH=${PATH}:$ANDROID_DIR/platform-tools
 export PATH=${PATH}:$ANDROID_DIR
 
-echo yes | sudo android update sdk --filter platform-tool --no-ui --force
-echo yes | sudo android update sdk --filter tool --no-ui --force
+# echo yes | sudo android update sdk --filter platform-tool --no-ui --force
+# echo yes | sudo android update sdk --filter tool --no-ui --force
 
-echo yes | sudo android update sdk --filter android-25 --no-ui --force
-echo yes | sudo android update sdk --filter android-24 --no-ui --force
-echo yes | sudo android update sdk --filter android-23 --no-ui --force
-echo yes | sudo android update sdk --filter android-22 --no-ui --force
-echo yes | sudo android update sdk --filter android-21 --no-ui --force
-echo yes | sudo android update sdk --filter android-19 --no-ui --force
+# echo yes | sudo android update sdk --filter android-25 --no-ui --force
+# echo yes | sudo android update sdk --filter android-24 --no-ui --force
+# echo yes | sudo android update sdk --filter android-23 --no-ui --force
+# echo yes | sudo android update sdk --filter android-22 --no-ui --force
+# echo yes | sudo android update sdk --filter android-21 --no-ui --force
+# echo yes | sudo android update sdk --filter android-19 --no-ui --force
 
-echo yes | sudo android update sdk --filter build-tools-25.0.2 --all --no-ui --force
-echo yes | sudo android update sdk --filter build-tools-25.0.1 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-25.0.2 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-25.0.1 --all --no-ui --force
 
-echo yes | sudo android update sdk --filter build-tools-24.0.3 --all --no-ui --force
-echo yes | sudo android update sdk --filter build-tools-24.0.2 --all --no-ui --force
-echo yes | sudo android update sdk --filter build-tools-24.0.1 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-24.0.3 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-24.0.2 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-24.0.1 --all --no-ui --force
 
-echo yes | sudo android update sdk --filter build-tools-23.0.3 --all --no-ui --force
-echo yes | sudo android update sdk --filter build-tools-23.0.2 --all --no-ui --force
-echo yes | sudo android update sdk --filter build-tools-23.0.1 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-23.0.3 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-23.0.2 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-23.0.1 --all --no-ui --force
 
-echo yes | sudo android update sdk --filter build-tools-21.1.2 --all --no-ui --force
+# echo yes | sudo android update sdk --filter build-tools-21.1.2 --all --no-ui --force
 
-echo yes | sudo android update sdk --filter extra-android-m2repository --no-ui --force
+# echo yes | sudo android update sdk --filter extra-android-m2repository --no-ui --force
 
-
-
-
-
-
-
+echo yes | sudo $ANDROID_DIR/tools/android update sdk --no-ui --all --filter \
+platform-tool,\
+tool,\
+android-25,\
+android-24,\
+android-23,\
+android-22,\
+android-21,\
+android-20,\
+android-19,\
+build-tools-25.0.2,\
+build-tools-25.0.1,\
+build-tools-24.0.3,\
+build-tools-24.0.2,\
+build-tools-24.0.1,\
+build-tools-23.0.3,\
+build-tools-23.0.2,\
+build-tools-23.0.1,\
+build-tools-21.1.2
 
 
 # BASEURL=http://dl.google.com/android/repository
