@@ -17,7 +17,6 @@ public class BuildCmd {
         Build(BuildTarget.Android);
     }
 
-    [MenuItem("Build/set sdk", false, 1)]
     public static void setEnvParams()
     {
         if (!string.IsNullOrEmpty (Environment.GetEnvironmentVariable ("androidSdkPath")))
