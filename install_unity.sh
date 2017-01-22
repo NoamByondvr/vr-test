@@ -19,11 +19,15 @@ echo " #############################################################"
 HASH=38b4efef76f0
 VERSION=5.5.0f3
 BASE_URL=http://download.unity3d.com/download_unity
+
 UNITY_URL=$BASE_URL/$HASH/MacEditorInstaller/Unity-$VERSION.pkg
-UNITY_ANDROID_URL=$BASE_URL/$HASH/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg
-
 curl -o $DOWNLOAD_DIR/unity.pkg $UNITY_URL
-curl -o $DOWNLOAD_DIR/unity_android.pkg $UNITY_ANDROID_URL
-
 sudo installer -dumplog -package $DOWNLOAD_DIR/unity.pkg -target /
+
+echo " #############################################################"
+echo " ############  INSTALL UNITY ANDROID PLAYER  #################"
+echo " #############################################################"
+
+UNITY_ANDROID_URL=$BASE_URL/$HASH/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg
+curl -o $DOWNLOAD_DIR/unity_android.pkg $UNITY_ANDROID_URL
 sudo installer -dumplog -package $DOWNLOAD_DIR/unity_android.pkg -target /
