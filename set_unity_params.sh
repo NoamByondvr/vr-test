@@ -14,18 +14,17 @@ mkdir -p $BUILD_DIR
 
 
 echo " #############################################################"
-echo " ##############       SET UNITY PARAMS       #################"
+echo " ##############       SET UNITY SDK PATH     #################"
 echo " #############################################################"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
--nographics \
--androidSdkPath $ANDROID_DIR/ \
+-androidSdkPath $ANDROID_DIR \
 -logFile $BUILD_DIR/set_unity_params.log \
 -projectPath $PROJECT_PATH \
 -silent-crashes \
 -quit \
--executeMethod BuildCmd.setEnvParams
+-executeMethod BuildCmd.setSdkPath
 
 echo '## Logs from build'
 cat $BUILD_DIR/set_unity_params.log

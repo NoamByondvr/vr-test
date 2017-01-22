@@ -8,8 +8,6 @@ public class BuildCmd {
 
     [MenuItem("Build/Build Android", false, 0)]
     public static void BuildAndroid() {
-        setEnvParams();
-
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
         PlayerSettings.bundleIdentifier = "com.ccccc.ppppp";
         set_keystore("Assets/Editor/keystore/testing.keystore", "testing", "testing", "testing");
@@ -18,18 +16,10 @@ public class BuildCmd {
     }
 
     [MenuItem("Build/set sdk", false, 1)]
-    public static void setEnvParams()
+    public static void setSdkPath()
     {
-        if (!string.IsNullOrEmpty (Environment.GetEnvironmentVariable ("androidSdkPath")))
-            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable ("androidSdkPath");
-        else
-            EditorSetup.AndroidSdkRoot = "$HOME/Library/Android/sdk";
-                
-        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("jdkPath")))
-            EditorSetup.JdkRoot = Environment.GetEnvironmentVariable("jdkPath");
-        
-        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidNdkRoot")))
-            EditorSetup.AndroidNdkRoot = Environment.GetEnvironmentVariable("androidNdkRoot");
+        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidSdkPath")))
+            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
     }
 
     public static void set_keystore(string path, string keystore_pass, string keyalias_name, string keyalias_pass)
