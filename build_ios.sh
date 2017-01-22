@@ -24,7 +24,7 @@ echo " #############################################################"
 -projectPath $PROJECT_PATH \
 -silent-crashes \
 -quit \
--executeMethod Build.BuildiOS $BUILD_DIR/ios_build
+-executeMethod BuildCmd.BuildiOS $BUILD_DIR/ios_build
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_ios.log

@@ -35,7 +35,7 @@ ls -l $HOME/Library/Android/sdk/
 -projectPath $PROJECT_PATH \
 -silent-crashes \
 -quit \
--executeMethod Build.BuildAndroid
+-executeMethod BuildCmd.BuildAndroid
 
 echo '## Logs from build'
 cat $BUILD_DIR/unity_android.log

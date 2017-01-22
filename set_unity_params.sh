@@ -25,7 +25,7 @@ echo " #############################################################"
 -projectPath $PROJECT_PATH \
 -silent-crashes \
 -quit \
--executeMethod Build.setEnvParams
+-executeMethod BuildCmd.setEnvParams
 
 echo '## Logs from build'
 cat $BUILD_DIR/set_unity_params.log
