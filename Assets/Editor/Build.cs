@@ -13,10 +13,15 @@ public class BuildMyGame {
         PlayerSettings.bundleIdentifier = "com.ccccc.ppppp";
         set_keystore("Assets/Editor/keystore/testing.keystore", "testing", "testing", "testing");
 
+        Build(BuildTarget.Android);
+        setEnvParams();
+    }
+
+    [MenuItem("Build/Set SDK Path", false, 1)]
+    public static void setEnvParams()
+    {
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidSdkPath")))
             EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
-
-        Build(BuildTarget.Android);
     }
 
     public static void set_keystore(string path, string keystore_pass, string keyalias_name, string keyalias_pass)
