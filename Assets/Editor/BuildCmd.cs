@@ -17,12 +17,17 @@ public class BuildCmd {
         Build(BuildTarget.Android);
     }
 
+    [MenuItem("Build/set sdk", false, 1)]
     public static void setEnvParams()
     {
-        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidSdkPath")))
-            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable("androidSdkPath");
+        if (!string.IsNullOrEmpty (Environment.GetEnvironmentVariable ("androidSdkPath")))
+            EditorSetup.AndroidSdkRoot = Environment.GetEnvironmentVariable ("androidSdkPath");
+        else
+            EditorSetup.AndroidSdkRoot = "$HOME/Library/Android/sdk";
+                
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("jdkPath")))
             EditorSetup.JdkRoot = Environment.GetEnvironmentVariable("jdkPath");
+        
         if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("androidNdkRoot")))
             EditorSetup.AndroidNdkRoot = Environment.GetEnvironmentVariable("androidNdkRoot");
     }
@@ -67,17 +72,26 @@ public class BuildCmd {
 public class EditorSetup {
     public static string AndroidSdkRoot {
         get { return EditorPrefs.GetString("AndroidSdkRoot"); }
-        set { EditorPrefs.SetString("AndroidSdkRoot", value); }
+        set {
+            EditorPrefs.SetString("AndroidSdkRoot", value);
+            AssetDatabase.Refresh();
+        }
     }
 
     public static string JdkRoot {
         get { return EditorPrefs.GetString("JdkPath"); }
-        set { EditorPrefs.SetString("JdkPath", value); }
+        set {
+            EditorPrefs.SetString("JdkPath", value);
+            AssetDatabase.Refresh();
+        }
     }
 
     // This requires Unity 5.3 or later
     public static string AndroidNdkRoot {
         get { return EditorPrefs.GetString("AndroidNdkRoot"); }
-        set { EditorPrefs.SetString("AndroidNdkRoot", value); }
+        set {
+            EditorPrefs.SetString("AndroidNdkRoot", value);
+            AssetDatabase.Refresh();
+        }
     }
 }
