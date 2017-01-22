@@ -20,7 +20,6 @@ echo " #############################################################"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -androidSdkPath $ANDROID_DIR \
 -projectPath $PROJECT_PATH \
--quit \
 -executeMethod BuildCmd.setEnvParams
 
 echo '## Logs from build'
