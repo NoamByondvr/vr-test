@@ -25,9 +25,18 @@ curl -o $DOWNLOAD_DIR/unity.pkg $UNITY_URL
 sudo installer -dumplog -package $DOWNLOAD_DIR/unity.pkg -target /
 
 echo " #############################################################"
-echo " ############  INSTALL UNITY ANDROID PLAYER  #################"
+echo " ##########    INSTALL UNITY ANDROID PLAYER    ###############"
 echo " #############################################################"
 
 UNITY_ANDROID_URL=$BASE_URL/$HASH/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-$VERSION.pkg
 curl -o $DOWNLOAD_DIR/unity_android.pkg $UNITY_ANDROID_URL
 sudo installer -dumplog -package $DOWNLOAD_DIR/unity_android.pkg -target /
+
+
+echo " #############################################################"
+echo " ############    INSTALL UNITY iOS PLAYER    #################"
+echo " #############################################################"
+
+UNITY_IOS_URL=$BASE_URL/$HASH/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-$VERSION.pkg
+curl -o $DOWNLOAD_DIR/unity_ios.pkg $UNITY_IOS_URL
+sudo installer -dumplog -package $DOWNLOAD_DIR/unity_ios.pkg -target /

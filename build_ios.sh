@@ -19,8 +19,9 @@ echo " #############################################################"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 -batchmode \
 -nographics \
--logFile $BUILD_DIR/unity_ios.log \
 -buildpath $BUILD_DIR/ios_build \
+-serial $UNITY_SERIAL \
+-logFile $BUILD_DIR/unity_ios.log \
 -projectPath $PROJECT_PATH \
 -silent-crashes \
 -quit \

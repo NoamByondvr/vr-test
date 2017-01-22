@@ -20,6 +20,7 @@ install:
     - ./set_unity_params.sh
 script:
     - ./build_android.sh
+    - ./build_ios.sh
 deploy:
     provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
